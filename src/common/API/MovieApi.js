@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'https://www.omdabi.com',
+    baseURL: 'http://www.omdbapi.com/',
 });

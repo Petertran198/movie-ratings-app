@@ -8,7 +8,7 @@ export default function Header() {
             <Link to='/' className='logo'>
                 <div>Movie Ratings</div>
             </Link>
-            <img src={user} className='user-image' alt='user portfolio image' />
+            <img src={user} className='user-image' alt='user portfolio' />
         </div>
     );
 }

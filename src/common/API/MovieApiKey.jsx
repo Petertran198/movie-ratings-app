@@ -1,1 +1,2 @@
-export const API_Key = '40cf050f';
+const MovieApiKey = '8653027';
+export default MovieApiKey;
