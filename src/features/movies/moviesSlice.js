@@ -14,7 +14,8 @@ export const moviesSlice = createSlice({
     },
 });
 
-// Action creators are generated for each case reducer function
+// Action creators are generated automatically for each case reducer function
 export const { addMovies } = moviesSlice.actions;
+// movie is the name of the reducer called in the store
 export const getAllMovies = (state) => state.movie.movies;
 export default moviesSlice.reducer;
