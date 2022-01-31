@@ -1,11 +1,12 @@
-.movie-list,
-.show-list {
+.movie-list {
     margin: 20px 0px;
+    height: 100%;
 }
 
-.show-list h2 {
+h1 {
     margin-bottom: 10px;
     font-weight: 400;
+    color: #fff;
 }
 .movie-container {
     display: grid;
@@ -18,4 +19,8 @@
     text-align: center;
     font-size: 2rem;
     margin: 5px;
+}
+
+.loading {
+    font-size: 2rem;
 }
