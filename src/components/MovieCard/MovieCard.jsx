@@ -6,7 +6,7 @@ export default function MovieCard(props) {
     return (
         <div>
             {' '}
-            <Link to={`/movie/${data.imdbID}`}>
+            <Link to={`/movie/${data.imdbID}`} style={{ textDecoration: 'none' }}>
                 <div className='card-item'>
                     <div className='card-inner'>
                         <div className='card-top'>

@@ -3,6 +3,7 @@
     justify-content: space-evenly;
     padding: 40px 0px;
     font-weight: 400;
+    color: #fff;
 }
 
 .movie-rating {
@@ -47,4 +48,9 @@
 
 .section-right {
     margin-left: 30px;
+}
+
+.loading {
+    font-size: 2rem;
+    color: lightgrey;
 }
