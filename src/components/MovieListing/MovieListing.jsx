@@ -2,7 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { getAllMovies, getAllShows } from '../../features/movies/moviesSlice';
 import MovieCard from '../MovieCard/MovieCard';
+import Slider from 'react-slick';
 import './movieListing.css';
+import { settings } from './settings';
+
 export default function MovieListing() {
     const movies = useSelector(getAllMovies); // is the same as useSelector((state)=> state.movie.movies);
     const shows = useSelector(getAllShows); // is the same as useSelector((state)=> state.movie.shows);
@@ -32,10 +35,11 @@ export default function MovieListing() {
         <div className='movie-wrapper'>
             <div className='movie-list'>
                 <h1>Movies</h1>
-                <div className='movie-container'>{renderMovies}</div>
+                <Slider {...settings}>{renderMovies}</Slider>
                 <br />
+
                 <h1>Shows</h1>
-                <div className='movie-container'>{renderShows}</div>
+                <Slider {...settings}>{renderShows}</Slider>
             </div>
         </div>
     );
