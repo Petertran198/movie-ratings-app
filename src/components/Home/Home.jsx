@@ -8,8 +8,8 @@ export default function Home() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchMovies());
-        dispatch(fetchShows());
+        dispatch(fetchMovies('Harry'));
+        dispatch(fetchShows('Friends'));
     }, [dispatch]);
 
     return (

@@ -8,16 +8,14 @@ const initialState = {
     selectedMoviesOrShows: {},
 };
 
-export const fetchMovies = createAsyncThunk('movie/fetchMovies', async () => {
-    const searchTerm = 'Harry';
-    const response = await MovieApi.get(`?apiKey=${MovieApiKey}&s=${searchTerm}`);
+export const fetchMovies = createAsyncThunk('movie/fetchMovies', async (term) => {
+    const response = await MovieApi.get(`?apiKey=${MovieApiKey}&s=${term}`);
     return response.data;
 });
 
-export const fetchShows = createAsyncThunk('movie/fetchShows', async () => {
-    const searchTerm = 'Harry';
+export const fetchShows = createAsyncThunk('movie/fetchShows', async (term) => {
     const response = await MovieApi.get(
-        `?apiKey=${MovieApiKey}&type=series&s=${searchTerm}`
+        `?apiKey=${MovieApiKey}&type=series&s=${term}`
     );
     return response.data;
 });

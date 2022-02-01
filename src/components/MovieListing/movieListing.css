@@ -1,6 +1,7 @@
 .movie-list {
     margin: 20px 0px;
     height: 100%;
+    min-height: 500px;
 }
 
 h1 {
@@ -22,5 +23,13 @@ h1 {
 }
 
 .loading {
+    font-size: 2rem;
+}
+
+.cant-find {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightgrey;
     font-size: 2rem;
 }

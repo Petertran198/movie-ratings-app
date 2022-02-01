@@ -19,18 +19,21 @@ export default function MovieListing() {
         renderMovies = movies.Search.map((movie, index) => {
             return <MovieCard key={index} data={movie} />;
         });
-    } else {
-        return <div className='movie-error'>Error...</div>;
     }
 
     if (shows.Response === 'True') {
         renderShows = shows.Search.map((show, index) => {
             return <MovieCard key={index} data={show} />;
         });
-    } else {
-        return <div className='movie-error'>Error...</div>;
     }
 
+    if (movies.Response == 'False' || shows.Response == 'False') {
+        return (
+            <div className='movie-list cant-find'>
+                Unable to find searched term in database...
+            </div>
+        );
+    }
     return (
         <div className='movie-wrapper'>
             <div className='movie-list'>
